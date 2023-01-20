@@ -16,18 +16,14 @@ const Navbar = () => {
           "fixed w-full top-0 flex justify-between items-center transition-all z-50"
         )}
       >
-        <div className="lg:container flex flex-wrap justify-between items-center md:mx-auto w-full">
-          <a href="/" className="flex items-center m-4">
-            <img
-              src="img/RapidQ_Logo-2.png"
-              class="mr-3 w-3/5"
-              alt="RapidQ-logo"
-            />
+        <div className="lg:container flex flex-wrap justify-center sm:justify-between items-center md:mx-auto w-full my-2">
+          <a href="#" className="flex items-center w-1/2 my-2 sm:w-52">
+            <img src="img/RapidQ_Logo-2.png" class="w-full" alt="RapidQ-logo" />
           </a>
           <a
             className={classNames(
               scrollPosition > 0 ? "opacity-100" : "opacity-0 cursor-default",
-              "bg-transparent hover:bg-blue-logo-primary border-blue-logo-primary text-blue-logo-primary hover:text-white rounded-full text-lg font-semibold border-2 py-1 px-4 transition-all hidden lg:block"
+              "bg-transparent hover:bg-blue-logo-primary border-blue-logo-primary text-blue-logo-primary hover:text-white rounded-full text-lg font-semibold border-2 mr-2 py-1 px-4 transition-all"
             )}
             href={
               scrollPosition > 0
