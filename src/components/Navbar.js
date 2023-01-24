@@ -1,4 +1,5 @@
 import { Fragment } from "react";
+import { useLocation } from "react-router-dom";
 import useScrollPosition from "../hooks/useScrollPosition";
 import { routes } from "./routes";
 
@@ -7,6 +8,9 @@ const Navbar = () => {
   const classNames = (...classes) => {
     return classes.filter(Boolean).join(" ");
   };
+
+  const location = useLocation();
+  const path = location.pathname;
 
   return (
     <Fragment>
@@ -17,7 +21,10 @@ const Navbar = () => {
         )}
       >
         <div className="lg:container flex flex-wrap justify-center sm:justify-between items-center md:mx-auto w-full my-2">
-          <a href="#" className="flex items-center w-1/2 my-2 sm:w-52">
+          <a
+            href={path === "/" ? "#" : "/"}
+            className="flex items-center w-1/2 my-2 sm:w-52"
+          >
             <img src="img/RapidQ_Logo-2.png" class="w-full" alt="RapidQ-logo" />
           </a>
           <a
